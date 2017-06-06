@@ -13,6 +13,8 @@ input{
 }
 
 
+.top-buffer { margin-top:20px; }
+
 .container{
     text-align:center;
 }
@@ -43,6 +45,7 @@ body {
 .post img{
     height:200px;
     width:200px;
+    border: 10px double #286090;
 }
 .post:hover img{
     opacity:0.3;

@@ -41,9 +41,11 @@ function subReddit(text){
                         var content = "<div class='post col-xs-12 col-md-3'><a target='_blank' href='" + "http://reddit.com" + item.data.permalink + "' class='url'><h5 class='postTitle'>" + item.data.title + "</h5><img src='" + item.data.url + "' /></a></div>";
                         if (j%4 == 0){
                             $(".posts").append("<div class='row'>");
+                            $(".posts").append("<div class='row top-buffer'>");
                         }
                         $(".posts").append(content);
                         $(".posts").append("</div>");
+
                     }
                     if (j==11){break;}
                 }
