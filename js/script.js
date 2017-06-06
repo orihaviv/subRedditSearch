@@ -20,10 +20,14 @@ $(document).ready(function() {
     })
 });
 
+function isValidImage(url) {
+    return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+}
+
 function subReddit(text){
     $(".posts").empty();
     if (!text){
-        text = "cats";
+        text = "wallpaper";
     }
     reddit.hot(text).limit(500)
         .fetch(function(res) {
@@ -31,9 +35,10 @@ function subReddit(text){
                 var j =-1;
                 for (var i=0; i < res.data.children.length; i++){
                     var item = res.data.children[i]
-                    if (item.data.thumbnail){
+                    if ((item.data.url) && isValidImage(item.data.url)){
+                        console.log(item);
                         j++;
-                        var content = "<div class='post col-xs-12 col-md-3'><a target='_blank' href='" + "http://reddit.com" + item.data.permalink + "' class='thumbnail'><h5 class='postTitle'>" + item.data.title + "</h5><img src='" + item.data.thumbnail + "' /></a></div>";
+                        var content = "<div class='post col-xs-12 col-md-3'><a target='_blank' href='" + "http://reddit.com" + item.data.permalink + "' class='url'><h5 class='postTitle'>" + item.data.title + "</h5><img src='" + item.data.url + "' /></a></div>";
                         if (j%4 == 0){
                             $(".posts").append("<div class='row'>");
                         }
