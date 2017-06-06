@@ -1,0 +1,67 @@
+
+
+
+input{
+    font-style: italic;
+    text-align: center;
+    font-size: 1.3em;
+    width: 30%;
+    padding: 7px 20px;
+    border: 0px #5ebf98;
+    border-radius: 9px;
+
+}
+
+
+.container{
+    text-align:center;
+}
+.button {
+    background-color: #666666;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+body {
+    background-image: url('http://i.imgur.com/i0bakoK.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.post{
+    /*display:inline;*/
+    /*float:left;*/
+}
+.post:hover h5{
+    color:#000;
+}
+.post img{
+    height:200px;
+    width:200px;
+}
+.post:hover img{
+    opacity:0.3;
+}
+.post a{
+    border:none;
+}
+
+.post .postTitle {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: transparent;
+    padding-left: 30px;
+    left: auto;
+    right: auto;
+    top: 30%;
+    padding-right: 20%;
+    font-weight: bold;
+}
