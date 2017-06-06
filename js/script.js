@@ -23,7 +23,7 @@ $(document).ready(function() {
 function subReddit(text){
     $(".posts").empty();
     if (!text){
-        text = "cats";
+        text = "wallpaper";
     }
     reddit.top(text).limit(500)
         .fetch(function(res) {
