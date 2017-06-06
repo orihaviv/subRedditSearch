@@ -35,10 +35,7 @@ body {
     background-repeat:no-repeat;
     background-size: cover;
 }
-.post{
-    /*display:inline;*/
-    /*float:left;*/
-}
+
 .post:hover h5{
     color:#000;
 }

@@ -23,9 +23,9 @@ $(document).ready(function() {
 function subReddit(text){
     $(".posts").empty();
     if (!text){
-        text = "wallpaper";
+        text = "cats";
     }
-    reddit.top(text).limit(500)
+    reddit.hot(text).limit(500)
         .fetch(function(res) {
             if (res){
                 var j =-1;
@@ -34,7 +34,7 @@ function subReddit(text){
                     if (item.data.thumbnail){
                         j++;
                         var content = "<div class='post col-xs-12 col-md-3'><a target='_blank' href='" + "http://reddit.com" + item.data.permalink + "' class='thumbnail'><h5 class='postTitle'>" + item.data.title + "</h5><img src='" + item.data.thumbnail + "' /></a></div>";
-                        if (j==0 || j%4 == 0){
+                        if (j%4 == 0){
                             $(".posts").append("<div class='row'>");
                         }
                         $(".posts").append(content);
