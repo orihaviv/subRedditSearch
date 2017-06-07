@@ -44,7 +44,6 @@ function subReddit(text){
                         }
                         $(".posts").append(content);
                         $(".posts").append("</div>");
-
                     }
                     if (j==11){break;}
                 }
