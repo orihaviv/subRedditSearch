@@ -27,7 +27,7 @@ function isValidImage(url) {
 function subReddit(text){
     $(".posts").empty();
     if (!text){
-        text = "wallpaper";
+        text = "art";
     }
     reddit.hot(text).limit(500)
         .fetch(function(res) {
